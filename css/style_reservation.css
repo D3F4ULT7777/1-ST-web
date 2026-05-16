@@ -195,3 +195,15 @@ body {
     background-color: var(--soft-blue);
     transform: translateY(-2px);
 }
+#bgVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Bach tji t7t l-ktba o les boutons */
+  object-fit: cover;
+  background: #000; /* Ila matsargatch l-video yban k7el */
+}
