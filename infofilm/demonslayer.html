@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demon Slayer</title>
+    <style>
+        /* --- VARIABLES --- */
+        :root {
+            --bg-dark: #0F0E0C;
+            --main-accent: #D4AF37;
+            --soft-blue: #A69177;
+            --text-light: #F2E8DF;
+            --gray-dark: #332F2B;
+            --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* --- RESET & GLOBAL --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: var(--font-main);
+            line-height: 1.6;
+        }
+
+        /* --- NAVIGATION --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(15, 14, 12, 0.9);
+            position: sticky;
+            top: 0;
+            }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--soft-blue);
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            padding: 8px 12px;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-light);
+            background-color: var(--gray-dark);
+            border-radius: 4px;
+        }
+
+        .shop-btn {
+            color: var(--main-accent);
+            border: 1px solid var(--main-accent);
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .shop-btn:hover {
+            background-color: var(--main-accent);
+            color: var(--bg-dark);
+        }
+
+        /* --- MOVIE CONTENT --- */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .movie-header {
+            margin-bottom: 40px;
+        }
+
+        .movie-header h1 {
+            font-size: 3rem;
+            color: var(--main-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .movie-grid {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap; /* Pour le mobile */
+        }
+
+        .movie-poster {
+            flex: 0 0 300px;
+        }
+
+        .movie-poster img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .movie-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .movie-info p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .info {
+            border-left: 3px solid var(--main-accent);
+            padding-left: 20px;
+            margin-top: 30px;
+        }
+
+        .info span {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--soft-blue);
+        }
+
+        .info strong {
+            color: var(--text-light);
+        }
+
+        /* --- VIDEO SECTION --- */
+        .video-container {
+            margin-top: 40px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .trailer-video {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            border: 1px solid var(--gray-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/html/aceuile.html">Accueil</a></li>
+                <li><a href="/html/resevation.html">Réservation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="/html/plan-salle.html" class="shop-btn">Regarder Maintenant</a>
+    </header>
+
+    <main class="container">
+        <header class="movie-header">
+            <h1>Demon Slayer: Kimetsu no Yaiba La Forteresse Infinie Film 1</h1>
+        </header>
+
+        <section class="movie-grid">
+            <div class="movie-poster">
+                <img src="/img/demon slayer.jpg" alt="Avatar Movie Poster">
+            </div>
+
+            <div class="movie-info">
+                <p>
+                    Le troisième volet de la saga Avatar. Après avoir exploré la forêt luxuriante dans Avatar 1 et les océans dans Avatar 2 : La Voie de l’Eau, Avatar 3 : Feu et Cendres s’aventurera dans des paysages volcaniques à couper le souffle. 
+                </p>
+                <p>
+                    Le film introduira une nouvelle tribu Na’vi, surnommée le peuple des cendres, vivant à proximité d’un volcan actif. Ces Na’vi, bien plus belliqueux, représenteront un défi de taille pour Jake Sully et sa famille.
+                </p>
+
+                <div class="info">
+                    <span><strong>Genre :</strong>  Animation</span>
+                    <span><strong>Durée :</strong>  02:36:00</span>
+                    <span><strong>Réalisateur :</strong> Haruo Sotozaki</span>
+                    <span><strong>Acteurs :</strong>Natsuki Hanae, Akari Kito, Hiro Shimono</span>
+                    <span><strong>Date de Sortie :</strong> 17 septembre 2025</span>
+                </div>
+
+                <div class="video-container">
+                    <video autoplay muted loop playsinline class="trailer-video">
+                        <source src="Demon Slayer： Kimetsu no Yaiba Infinity Castle ｜ Official Trailer ｜ Crunchyroll.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

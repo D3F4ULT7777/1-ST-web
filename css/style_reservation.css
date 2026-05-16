@@ -1,0 +1,197 @@
+/* ==========================================================================
+   1. VARIABLES & RESET
+   ========================================================================== */
+
+:root {
+    --bg-dark: #0F0E0C;        /* Noir avec une pointe de marron */
+    --main-accent: #D4AF37;    /* Or / Gold */
+    --soft-blue: #A69177;      /* Sable / Beige chaud */
+    --text-light: #F2E8DF;     /* Blanc cassé crème */
+    --gray-dark: #332F2B;
+    --button-color: var(--main-accent);
+    --font-family: 'Arial', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; /* Aligne les sections verticalement */
+    min-height: 100vh;
+}
+/* --- VIDEO BACKGROUND --- */
+.video-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; 
+}
+
+/* La vidéo en elle-même (arrière-plan) */
+.background-video {
+    position: fixed; /* Maintient la vidéo fixe même en scrollant */
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Overlay sombre pour la lisibilité (RECOMMANDÉ) */
+.video-container::after {
+    content: '';
+    position: fixed; /* Fait correspondre le positionnement à la vidéo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 14, 12, 0.6); 
+    z-index: -1;
+}
+
+/* ==========================================================================
+   2. NAVIGATION (Header)
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    width: 100%;
+}
+
+.navbar nav a {
+    color: var(--soft-blue);
+    padding: 8px 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.navbar nav a:hover {
+    background-color: var(--text-light);
+    color: var(--bg-dark);
+    border-radius: 4px;
+}
+
+.shop-btn {
+    background: none;
+    color: var(--soft-blue);
+    border: 1px solid var(--soft-blue);
+    padding: 8px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+    background-color: var(--main-accent);
+    color: var(--bg-dark);
+    border-color: var(--main-accent);
+}
+
+/* ==========================================================================
+   3. HERO SECTION & TITRES
+   ========================================================================== */
+.reservation-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    flex-grow: 1;
+}
+
+.reservation-title {
+    text-align: center;
+    letter-spacing: 15px;
+    text-shadow: #EBEFF2 2px 2px 4px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--main-accent);
+}
+
+/* 4. FORMULAIRE DE RÉSERVATION*/
+
+.reservation-form-container {
+    width: 100%;
+    max-width: 450px;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.02); 
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    border: 1px solid var(--gray-dark);
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacement régulier entre les groupes */
+}
+
+.reservation-form label {
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: var(--soft-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Styles communs Inputs & Select */
+.reservation-form input,
+.reservation-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gray-dark);
+    border-radius: 6px;
+    background-color: var(--gray-dark);
+    color: var(--text-light);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus {
+    border-color: var(--main-accent);
+    box-shadow: 0 0 0 3px rgba(163, 178, 191, 0.2); 
+}
+
+/* Bouton de validation */
+.submit-btn {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: var(--button-color);
+    color: var(--bg-dark);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    align-self: center;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--soft-blue);
+    transform: translateY(-2px);
+}

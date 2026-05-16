@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema</title>
+    <link rel="stylesheet" href="/css/style_plansalle.css">
+</head>
+<body>
+        <section>
+                <header class="navbar">
+                    <nav>
+                        <a href="aceuile.html">Home</a>
+                        <a href="resevation.html">reservation</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                        <a href="plan-salle.html" class="shop-btn">Regarde Maintenant</a>
+            </header>
+    </section>
+    <div class="container">
+        <main>
+            <h1>🎬 Cinema</h1>
+            <p>Réservez vos places de cinéma en toute simplicité</p>
+        </main>
+        <div class="content">
+            <div class="section">
+                <h2>Sélection du Film</h2>
+                <div class="movie-selection">
+                    <label for="movie">Choisissez votre film :</label>
+                    <select id="movie">
+                        <option value="80">Avatar Fire And Ash - 80 DH</option>
+                        <option value="70">casablanca Dakar - 70 DH</option>
+                        <option value="60">Demon Slayer 8 - 60 DH</option>
+                        <option value="65">Jujutsu kaisen : exécution - 65 DH</option>
+                        <option value="90">Five nights at freddy's 2 - 90 DH</option>
+                        <option value="70">Zootopie 2 - 70 DH</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Plan de la Salle</h2>
+                
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-seat available"></div>
+                        <span>Disponible</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-seat selected"></div>
+                        <span>Sélectionné</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-seat reserved"></div>
+                        <span>Réservé</span>
+                    </div>
+                </div>
+
+                <div class="cinema-screen">ÉCRAN</div>
+                
+                <div class="seats-container" id="seatsContainer"></div>
+            </div>
+
+            <div class="section">
+                <h2>Récapitulatif de la Réservation</h2>
+                <div class="booking-summary">
+                    <div class="summary-row">
+                        <span>Film sélectionné :</span>
+                        <span id="selectedMovie">Avatar 3</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Prix unitaire :</span>
+                        <span id="unitPrice">80 DH</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Nombre de places :</span>
+                        <span id="seatCount">0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Total à payer :</span>
+                        <span id="totalPrice">0 DH</span>
+                    </div>
+                </div>
+
+                <button class="confirm-btn" id="confirmBtn" disabled>
+                    Confirmer la réservation
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="confirmModal">
+        <div class="modal-content">
+            <h3>✅ Réservation Confirmée !</h3>
+            <p id="confirmMessage"></p>
+            <button class="modal-btn" onclick="closeModal()">Nouvelle Réservation</button>
+        </div>
+    </div>
+
+    <script src="/javascrpt/plan-salle.js"></script>
+</body>
+</html>
